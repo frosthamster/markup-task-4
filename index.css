@@ -1,0 +1,113 @@
+.cat_block
+{
+    display: inline-block;
+
+    border: 1px #6a6a6a solid;
+    border-radius: 3px;
+
+    width: 280px;
+    margin: 5px;
+}
+
+.cat_block:hover
+{
+    box-shadow: 0 0 10px;
+}
+
+.cat_img
+{
+    width: 100%;
+    height: 15em;
+    margin: auto;
+
+    opacity: .8;
+}
+
+.cat_img:hover
+{
+    opacity: 1;
+}
+
+.cat_name
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cat_name > a
+{
+    font-size: 1.3em;
+
+    color: black;
+    text-decoration: none;
+}
+
+.cat_name > a:hover
+{
+    color: #634524;
+}
+
+.cat_description
+{
+    margin: 10px;
+
+    min-height: 100px;
+
+    color: #4a4a4a;
+}
+
+.cat_description_short > p
+{
+    margin: 3px;
+}
+
+.cat_description_short > p:hover
+{
+    text-shadow: 1px 1px 3px;
+}
+
+.cat_description_short .cat_status
+{
+    margin-top: 8px;
+}
+
+.cat_description_full
+{
+    display: none;
+}
+
+.change_orientation_img
+{
+
+    width: 50px;
+    height: 50px;
+
+    background-image: url('resources/horizontal.png');
+
+    display: block;
+}
+
+.change_orientation_button:checked ~ main .cat_block
+{
+    display: block;
+    margin: 30px auto;
+    width: 800px;
+
+    font-size: 2em;
+}
+
+.change_orientation_button:checked ~ main .cat_description_short
+{
+    display: none;
+}
+
+.change_orientation_button:checked ~ main .cat_description_full
+{
+    display: block;
+}
+
+.change_orientation_button:checked ~ header .change_orientation_img
+{
+    background-image: url('resources/vertical.png');
+}
