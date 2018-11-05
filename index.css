@@ -70,9 +70,17 @@
     margin-top: 8px;
 }
 
-.cat_description_full
+.cat_description_full,
+.change_orientation_button:checked ~ main .cat_description_short
 {
     display: none;
+}
+
+.change_orientation_img,
+.change_orientation_button:checked ~ main .cat_block,
+.change_orientation_button:checked ~ main .cat_description_full
+{
+    display: block;
 }
 
 .change_orientation_img
@@ -81,27 +89,14 @@
     height: 50px;
 
     background-image: url('resources/horizontal.png');
-
-    display: block;
 }
 
 .change_orientation_button:checked ~ main .cat_block
 {
-    display: block;
     margin: 30px auto;
     width: 800px;
 
     font-size: 2em;
-}
-
-.change_orientation_button:checked ~ main .cat_description_short
-{
-    display: none;
-}
-
-.change_orientation_button:checked ~ main .cat_description_full
-{
-    display: block;
 }
 
 .change_orientation_button:checked ~ header .change_orientation_img
